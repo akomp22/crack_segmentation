@@ -42,20 +42,19 @@ def val_name_list(dir_validation = '/content/drive/My Drive/ML/Skynet keypoint/v
 
 
 def disp(im,mask):
-    mask = np.concatenate((mask,mask,mask),axis = 3)
-    im2 = im.copy()
-    im2[mask==0] = im2[mask==0]-0.2
-    im2[mask==1] = im2[mask==1]+0.3
+  mask = np.concatenate((mask,mask,mask),axis = 3)
+  im2 = im.copy()
+  im2[mask==0] = im2[mask==0]-0.2
+  im2[mask==1] = im2[mask==1]+0.3
 
 
-    im = im[0,:,:,:]
-    mask = mask[0,:,:,:]
-    im2 = im2[0,:,:,:]
-
-    plt.figure(figsize=(20,20))
-    plt.imshow(im2)
-    plt.show()
-    print('\n')
+  im = im[0,:,:,:]
+  mask = mask[0,:,:,:]
+  im2 = im2[0,:,:,:]
+  
+  plt.figure(figsize=(20,20))
+  plt.imshow(im2)
+  plt.show()
 
 
 
